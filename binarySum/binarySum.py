@@ -24,4 +24,4 @@ def add_binary_nums(x, y):
 
 
 # Driver code
-print(add_binary_nums('10001', '1'))
+print(add_binary_nums('11', '1'))
