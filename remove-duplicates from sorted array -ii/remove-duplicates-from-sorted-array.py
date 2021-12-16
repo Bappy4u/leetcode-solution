@@ -7,3 +7,6 @@ class Solution:
                 p1 += 1
 
         return p1
+
+    dataset = [1, 2, 3]
+
