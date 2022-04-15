@@ -5,6 +5,7 @@ class Solution:
             it can be solved in oneline
             --> return sorted(s) == sorted(t)
         """
+        
         if len(s) != len(t):
             return False
         
