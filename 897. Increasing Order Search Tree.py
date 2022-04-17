@@ -19,6 +19,7 @@ class Solution:
         for i in res:
             temp.right = TreeNode(i)
             temp = temp.right
+          
             
         return resNode.right
             
