@@ -2,6 +2,13 @@ def reverse1(word: str):
     return "".join(reversed(list(word)))
 
 
+def reverse2(words):
+    res = ""
+
+    for c in words:
+        res = c + res
+
+    return res
 
 def reverseSent(words):
     temp = " "
@@ -11,9 +18,11 @@ def reverseSent(words):
         temp +=c
         if c == " ":
             res = temp +" "+ res
-            temp =""
+            temp =" "
     res = temp + res 
     return res
 
 print(reverseSent("I love you."))
+
+print(reverse2("I eat rice."))
 
