@@ -4,13 +4,18 @@ def reverse1(word: str):
 
 
 def reverseSent(words):
-    temp = ""
+    temp = " "
     res = ""
     for c in words:
+        print(c)
         temp +=c
         if c == " ":
-            res = temp + res
-        
+            res = temp +" "+ res
+            temp =""
+    res = temp + res 
     return res
 
 print(reverseSent("hello world!"))
+
+s = "Hello world."
+print(s.split(" "))
