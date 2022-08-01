@@ -3,12 +3,11 @@ def reverse1(word: str):
 
 
 def reverse2(words):
-    res = ""
-
+    res = []
     for c in words:
-        res = c + res
+        res.append(c)
 
-    return res
+    return "".join(reversed(res))
 
 def reverseSent(words):
     temp = " "
