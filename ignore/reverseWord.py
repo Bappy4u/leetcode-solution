@@ -15,7 +15,5 @@ def reverseSent(words):
     res = temp + res 
     return res
 
-print(reverseSent("hello world!"))
+print(reverseSent("I love you."))
 
-s = "Hello world."
-print(s.split(" "))
