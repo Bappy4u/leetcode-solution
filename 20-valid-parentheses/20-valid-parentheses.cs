@@ -8,25 +8,14 @@ public class Solution {
         };
         
         for(int i=0; i<s.Length; i++){
-            
-            if (!parenthesis.ContainsKey(s[i])){
+            if (st.Count()>0 && parenthesis.ContainsKey(s[i]) && st.Peek()==parenthesis[s[i]]){
+                    st.Pop();
+                }
+            else{
                 st.Push(s[i]);
             }
-            else{
-                if (st.Count()>0 && st.Peek()!=parenthesis[s[i]]){
-                    return false;
-                }
-                else{
-                    if (st.Count()>0){
-                        st.Pop();
-                    }
-                    else{
-                        st.Push(s[i]);
-                    }
-                    
-                }
+                
             }
-        }
         
         return st.Count()==0;
         
