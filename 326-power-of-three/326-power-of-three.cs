@@ -4,7 +4,7 @@ public class Solution {
             return true;
         }
         else if(n!=0 && n%3==0){
-            return IsPowerOfThree(n/3);
+            return this.IsPowerOfThree(n/3);
         }
         else{
             return false;
