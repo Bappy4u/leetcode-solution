@@ -1,10 +1,9 @@
 class Solution:
     def findCenter(self, edges: List[List[int]]) -> int:
-        nodes = {}
+        nodes = []
         for node,node1 in edges:
-            nodes[node] = []
-            nodes[node1]= []
-            
+            nodes.append(node)
+            nodes.append(node1)
            
         for node in nodes:
             j = len(edges)
