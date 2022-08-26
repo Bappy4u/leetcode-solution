@@ -3,16 +3,14 @@ class Solution:
         
         if destination==source:
             return True
-        nodes = {node:[] for node in range(n)}
         
+        nodes = {node:[] for node in range(n)}
+
         for frm,to in edges:
             nodes[frm].append(to)
             nodes[to].append(frm)
         
-        
         visited = set()
-        
-        
         q = deque()
         q.append(nodes[source])
         
