@@ -7,24 +7,15 @@
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         
-        def maxheight(root):
-            if root:
-                left = root.left
-                right = root.right
-                return 1+max(maxheight(left), maxheight(right))
+        def dfs(root):
+            if not root:
+                return [True, 0]
             
-            return 0
-        
-        
-        def bst(root):
-            if root:
-                leftdiff = abs(maxheight(root.left) - maxheight(root.right))
-                if leftdiff>1:
-                    print(leftdiff)
-                    return False
-                return bst(root.left) and bst(root.right)
-                
-            return True
+            left,right = dfs(root.left),dfs(root.right)
             
-        return bst(root)
+            balanced = (left[0] and right[0] and abs(left[1]-right[1])<2)
+            
+            return[balanced, 1 + max(left[1],right[1])]
+        
+        return dfs(root)[0]
         
