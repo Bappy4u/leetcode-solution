@@ -7,8 +7,9 @@ public class Solution {
             var diff = target - nums[i];
             
             if (map.ContainsKey(diff)){
-                int[] res1 = {map[diff],i};
-                return res1;
+                res[0]=map[diff];
+                res[1]=i;
+                return res;
             }
             else{
                 map[nums[i]]=i;
