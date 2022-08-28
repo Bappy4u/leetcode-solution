@@ -44,7 +44,6 @@ public class Solution {
         foreach(var st in characters){
             res = st + res;
         }
-        
         return res;
     }
 }
