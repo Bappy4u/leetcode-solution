@@ -17,13 +17,17 @@ public class Solution {
             }
             
             else if (s[i].Equals(']')){
+                
                 var temp = "";
                 
                 while (true){
                     var x = characters.Pop();
+                    
                     if (x.Equals("[")) break;
+                    
                     temp = x + temp;
                 }
+                
                 string str = string.Concat(Enumerable.Repeat(temp, (int)digits.Pop()));
                 characters.Push(str);
                 i++;
@@ -37,8 +41,9 @@ public class Solution {
         
         string res = "";
         
-        while (characters.Count()>0){
-            res =characters.Pop() + res;
+        foreach(var st in characters){
+            
+            res = st + res;
         }
         
         return res;
