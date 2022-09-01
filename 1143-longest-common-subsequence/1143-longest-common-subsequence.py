@@ -10,5 +10,5 @@ class Solution:
                     res = text1[i] + res
                 else:
                     dp[i][j] = max(dp[i][j + 1], dp[i + 1][j])
-        print(res)
+        print(res[:dp[0][0]])
         return dp[0][0]
